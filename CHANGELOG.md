@@ -6,4 +6,6 @@
 ## 1.1.1 - Update package.json
 ## 1.2.0 - new apm package
 ## 1.3.0 - update ui-theme-template version
-## 2.0.0 - Upgrade to match PatternFly 4
+## 2.0.0 - Release Error
+## 3.0.0 - Upgrade to match PatternFly 4
+## 3.0.1 - Improve Readme

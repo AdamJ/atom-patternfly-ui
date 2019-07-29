@@ -8,11 +8,19 @@
 atom-text-editor[mini] {
   padding-left: @component-padding/2;
   color: @text-color;
+  max-height: 28px;
   border-radius: @component-border-radius;
+  border-bottom: 1px solid #fff;
   background-color: @input-background-color;
+
+  &:hover {
+    border-bottom: 1px solid #06c;
+  }
 
   &.is-focused {
     background-color: darken(@input-background-color, 5%);
+    border-bottom: 1px solid #06c;
+    box-shadow: 0 -1px 4px 0 #4d5258;
   }
 
   .placeholder-text {

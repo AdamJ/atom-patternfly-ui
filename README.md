@@ -4,11 +4,28 @@ This theme is inspired by [PatternFly](https://www.patternfly.org) for use with 
 
 This is a dark theme, using blue as the primary color.
 
+----
+
 ## PatternFly UI Theme
 
 Some of the customized elements that you'll find in this theme:
 
-### Styleguide
+### Tree View Status Icons
+
+All status changes for items in the Tree View now have matching icons, in addition to the color changes.
+
+__Note:__ The below icons are from Font Awesome. No changes were made to the files included in this theme. View their license here: https://fontawesome.com/license
+
+The icons match up as follows:
+
+- [Pencil](https://fontawesome.com/icons/pencil-alt?style=solid) = Modified file
+
+- [Plus](https://fontawesome.com/icons/plus?style=solid) = New file
+
+- [Eye Slash](https://fontawesome.com/icons/eye-slash?style=solid) = Ignored file
+
+
+## Styleguide
 
 ![https://i.imgur.com/ZPCEBmr.png](https://i.imgur.com/ZPCEBmr.png)
 

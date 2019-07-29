@@ -2,6 +2,16 @@
 // Panels
 // -------------------
 
+.tool-panel.tree-view {
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  background-color: rgba(20, 20, 20, 0.9);
+}
+
+atom-pane-container atom-pane .item-views {
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100);
+  background-color: rgba(20, 20, 20, 0.9);
+}
+
 // Overrides: atom/static/panels.less
 
 .panel-heading {
@@ -13,6 +23,7 @@
   background-color: @inset-panel-background-color;
   .panel-heading {
     background-color: lighten(@inset-panel-background-color, 4%);
+    font-weight: 700;
   }
 }
 
@@ -24,4 +35,12 @@ atom-panel.modal {
   border: 1px solid @overlay-border-color;
   border-top: none;
   box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
+}
+
+atom-panel {
+  li.event.two-lines.selected {
+    .key-binding {
+      border-color: #73bcf7;
+    }
+  }
 }

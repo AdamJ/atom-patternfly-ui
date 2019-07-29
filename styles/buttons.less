@@ -6,27 +6,37 @@
 
 
 .btn {
+  padding: .375rem 1rem;
   color: lighten(@text-color, 6%);
-  background-color: @button-background-color;
-  border-radius: 30em;
-  padding-right: 24px;
-  padding-left: 24px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  font-weight: 500;
+  line-height: 1.5;
+  height: auto;
   &:hover,
   &:focus {
-    color: @text-color-highlight;
+    color: @text-color;
     background-color: @button-background-color-hover;
   }
   &:active {
-    color: fade(@text-color-selected, 66%);
+    color: @text-color;
     background-color: darken(@button-background-color, 2%);
   }
   &.selected {
-    color: @text-color-selected;
+    color: @text-color;
     background-color: @button-background-color-selected;
   }
   &:focus,
   &:focus:active {
     outline: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] .btn {
+    background-color: #d2d2d2 !important;
+    border-color: #72767b;
+    color: #72767b !important;
   }
 }
 
@@ -35,25 +45,40 @@
   &.btn-success,
   &.btn-warning {
     &.selected {
-      color: @text-color-dark;
+      color: @text-color;
     }
   }
 }
 
+.btn.selected {
+  border: 1px solid #06c !important;
+}
+
+.btn-default.selected {
+  background-color: #06c;
+  &:hover {
+    background-color: darken(#06c, 10%);
+    color: @text-color;
+  }
+}
+.btn-default {
+  color: #06c;
+}
+
 // Colored buttons -----------------------
 
-.btn.btn-primary { .btn-color(#007BBA); } // pf-color-blue-400
-.btn.btn-info    { .btn-color(#7DC3E8); } //
-.btn.btn-success { .btn-color(#92D400); }
-.btn.btn-warning { .btn-color(#F0AB00); }
-.btn.btn-error   { .btn-color(#CC0000); }
+.btn.btn-primary { .btn-color(#06c); } // --pf-global--primary-color--100
+.btn.btn-info    { .btn-color(#004368); } // --pf-global--info-color--200
+.btn.btn-success { .btn-color(#486b00); } // --pf-global--success-color--200
+.btn.btn-warning { .btn-color(#795600); } // --pf-global--warning-color--200
+.btn.btn-error   { .btn-color(#470000); } // --pf-global--danger-color--300
 
 .btn-color(@bg) {
   color: @text-color;
   background-color: @bg;
   &:hover,
   &:focus {
-    background-color: lighten(@bg, 10%);
+    background-color: lighten(@bg, 15%);
   }
   &:active {
     background-color: darken(@bg, 10%);
@@ -71,5 +96,17 @@
 // Button Group -----------------------
 
 .btn-group > .btn {
-  border-color: hsla(0,0%,0%,.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.btn-group > .btn:first-child {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+.btn-group > .btn:last-child,
+.btn-group > .btn.selected:last-child,
+.btn-group > .dropdown-toggle {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.btn-toolbar > .btn-group + .btn,
+.btn-toolbar > .btn + .btn {
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }

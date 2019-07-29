@@ -9,20 +9,48 @@
 
 .status {
   &-added {
-    color: lighten(@text-color-success, 15%);
+    color: #92d400;
   }
   &-modified {
-    color: lighten(@text-color-warning, 15%);
+    color: #73bcf7;
   }
   &-removed {
-    color: lighten(@text-color-error, 15%);
+    color: #c9190b;
   }
   &-renamed {
-    color: lighten(@text-color-info, 25%);
+    color: #f0ab00;
   }
 }
 
-.error-messages {
-  color: lighten(@text-color-error, 15%);
-  font-weight: 500;
+.error-messages,
+.error-message {
+  padding: 16px;
+  border-top: 1px solid #393f44;
+  border-right: 1px solid #393f44;
+  border-bottom: 1px solid #393f44;
+  border-left: 3px solid #f0ab00;
+  color: #f0ab00;
+  font-weight: 400;
+}
+
+.info-messages,
+.loading {
+  padding: 16px;
+  border-top: 1px solid #393f44;
+  border-right: 1px solid #393f44;
+  border-bottom: 1px solid #393f44;
+  border-left: 3px solid #73bcf7;
+  color: #73bcf7;
+  font-weight: 400;
+  .loading-message {
+    color: #73bcf7;
+    font-weight: 400;
+  }
+}
+
+.loading.loading-spinner-tiny,
+.loading.loading-spinner-small,
+.loading.loading-spinner-medium,
+.loading.loading-spinner-large {
+  border: none;
 }

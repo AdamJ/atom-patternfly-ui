@@ -12,30 +12,31 @@
 
 
 // Text Colors
-@text-color:           #fafafa; // pf-color-black-100
-@text-color-dark:      #292e34;
-@text-color-subtle:    #909496;
+@text-color:           #fff; // pf-color-black-100
+@text-color-dark:      #030303; // $pf-color-black-1000
+@text-color-subtle:    #72767b; // --pf-global--Color--dark-200
 @text-color-highlight: #00b9e4; // pf-color-light-blue-400
 @text-color-selected:  #beedf9; // pf-color-light-blue-100
 
 @text-color-info:    lighten(#004368, 15%);
-@text-color-success: #6ca100;
-@text-color-warning: #b58100;
-@text-color-error:   #a30000;
+@text-color-success: #486b00; // --pf-global--success-color--200
+@text-color-warning: #795600; // --pf-global--warning-color--200
+@text-color-error:   #470000; // --pf-global--danger-color--300
 
 // Background colors
-@background-color-info:    #39a5dc;
-@background-color-success: #92d400;
-@background-color-warning: #f0ab00;
-@background-color-error:   #cc0000;
+@background-color-dark:    #151515;
+@background-color-info:    #73bcf7; // --pf-global--info-color--100
+@background-color-success: #92d400; // --pf-global--success-color--100
+@background-color-warning: #f0ab00; // --pf-global--warning-color--100
+@background-color-error:   #c9190b; // --pf-global--danger-color--100
 
-@background-color-highlight: #def3ff; // pf-color-blue-50
-@background-color-selected:  #007bba; // pf-color-blue-400
-@app-background-color:       #004368; // pf-color-blue-600
+@background-color-highlight: transparent; // pf-color-blue-50
+@background-color-selected:  #06c; // pf-color-blue-400
+@app-background-color:       #73bcf7; // --pf-global--info-color--100
 
 // Base colors
-@base-background-color: #282d33;
-@base-border-color:     darken(@base-background-color, 8%);
+@base-background-color: rgba(20, 20, 20, 0.9);
+@base-border-color:     #393f44;
 
 // Component colors
 @pane-item-background-color: @base-background-color;
@@ -43,7 +44,7 @@
 
 @input-background-color: lighten(@base-background-color, 4%);
 @input-border-color:     @base-border-color;
-@input-border-color-hightlight: #39a5dc;
+@input-border-color-hightlight: #73bcf7; // --pf-global--active-color--300
 
 @tool-panel-background-color: @base-background-color;
 @tool-panel-border-color:     @base-border-color;
@@ -57,40 +58,40 @@
 @overlay-background-color: lighten(@base-background-color, 5%);
 @overlay-border-color:     @base-border-color;
 
-@button-background-color:          lighten(@base-background-color, 10%);
-@button-background-color-hover:    lighten(@button-background-color, 12%);
-@button-background-color-selected: @button-background-color-hover;
-@button-border-color:              @base-border-color;
+@button-background-color:          #06c; // primary button
+@button-background-color-hover:    #004080;
+@button-background-color-selected: transparent;
+@button-border-color:              transparent;
 
-@tab-bar-background-color:    #282d33;
-@tab-bar-border-color:        #127cb8; // pf-color-light-blue-400
+@tab-bar-background-color:    rgba(20, 20, 20, 0.9);
+@tab-bar-border-color:        #00b9e4; // pf-color-light-blue-400
 @tab-background-color:        #002235; // pf-color-blue-700
-@tab-background-color-active: #0d669a; // pf-color-blue-400
-@tab-border-color:            #127cb8; // pf-color-light-blue-400
+@tab-background-color-active: #06c; // pf-color-blue-400
+@tab-border-color:            #00b9e4; // pf-color-light-blue-400
 
 @tree-view-background-color: @base-background-color;
 @tree-view-border-color:     #127cb8; // pf-color-light-blue-400
 
 // Site colors
-@ui-site-color-1: #0088ce; // pf-color-blue-400
-@ui-site-color-2: #5cb85c; // bootstrap green
-@ui-site-color-3: #ec7a08; // pf-color-orange-400
+@ui-site-color-1: #06c; // pf-color-blue-400
+@ui-site-color-2: #5ba352; // $pf-color-green-400
+@ui-site-color-3: #c46100; // pf-color-orange-400
 @ui-site-color-4: #D831B0; // pink
-@ui-site-color-5: #f5c12e; // pf-color-gold-300
+@ui-site-color-5: #f4c145; // pf-color-gold-300
 
 // Sizes
-@font-size: 14px;
+@font-size: 16px;
 @input-font-size: 16px;
 
 @disclosure-arrow-size: 12px;
 
-@component-padding: 10px;
-@component-icon-padding: 5px;
+@component-padding: 16px;
+@component-icon-padding: 8px;
 @component-icon-size: 24px;
 @component-line-height: 24px;
 
 @tab-height: 30px;
 
 // Misc
-@component-border-radius: 5px;
+@component-border-radius: 3px;
 @font-family: “Overpass”,Overpass,“open sans”,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";

@@ -3,22 +3,39 @@
 // -------------------
 
 // Overrides: Bootstrap's `.tooltip`.
+// https://getbootstrap.com/docs/3.3/javascript/#tooltips
 
 
 .tooltip {
+  &.top .tooltip-arrow {
+    border-top-color: @background-color-dark;
+  }
+  &.right .tooltip-arrow {
+    border-right-color: @background-color-dark;
+  }
+  &.bottom .tooltip-arrow {
+    border-bottom-color: @background-color-dark;
+  }
+  &.left .tooltip-arrow {
+    border-left-color: @background-color-dark;
+  }
+
   .tooltip-inner {
     line-height: 1;
     padding: .75em;
     white-space: nowrap;
     max-width: none;
-    border-radius: 10px;
+    border-radius: 3px;
+    color: @text-color;
+    background: @background-color-dark;
+    box-shadow: 2px 2px 4px 0 #4d5258;
   }
 
   .keystroke {
     padding: .15em .4em;
     margin: 0 -.3em 0 .25em;
     border-radius: max(2px, @component-border-radius / 2);
-    color: @text-color-selected;
-    background: @background-color-selected;
+    color: @background-color-dark;
+    background: @background-color-dark;
   }
 }

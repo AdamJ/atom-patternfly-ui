@@ -7,14 +7,31 @@
 @badge-background-color: @background-color-selected;
 
 .badge {
-  padding-right: 7px;
-  padding-left: 7px;
+  padding-right: 8px;
+  padding-left: 8px;
+  min-width: 32px;
   color: @text-color;
   background-color: @badge-background-color;
   border-radius: 30em;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  &.badge-large {
+    padding: 5px 16px;
+  }
+  &.badge-medium {
+    padding: 4px 14px;
+  }
+  &.badge-small {
+    padding: 3px 10px;
+  }
   &.badge-flexible {
+    padding: 0 8px;
+    min-width: 32px;
     border-radius: 30em;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
   }
   &:hover {
     background-color: darken(@badge-background-color, 10%);

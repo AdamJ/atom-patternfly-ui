@@ -5,7 +5,7 @@
 
 // -------------------
 
-.icon:before{
+.icon:before {
 	font-weight: normal;
 	font-style: normal;
 	text-align: center;
@@ -25,8 +25,8 @@
 
 // ... unless the theme uses proportional units
 .theme-one-dark-ui,
-.theme-one-light-ui{
-	.tab-bar .tab > .title.icon:before{
+.theme-one-light-ui {
+	.tab-bar .tab > .title.icon:before {
 		font-size: 1.1em;
 		margin-right: .3em;
 		width: 1em;
@@ -35,13 +35,32 @@
 }
 
 // Turn off antialiasing for macOS
-.thicken{
+.thicken {
 	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 // Accentuate an icon's edges
-.sharpen{
+.sharpen {
 	text-shadow: 0 0 0;
+}
+
+/* ==== *
+	Custom icon for the tree view coloring
+*  ==== */
+.icon-repo::before {
+	color: #06c !important;
+}
+.icon-file-directory::before {
+	color: #ef9234 !important;
+}
+.icon-file-text::before {
+	color: #a2d9d9 !important;
+}
+.icon-book::before {
+	color: #bde5b8 !important;
+}
+.icon-file-binary::before {
+	color: #cbc1ff !important;
 }
 
 /*============================================================================*

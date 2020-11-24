@@ -7,20 +7,20 @@
 
 
 .tree-view-resizer {
-  border-right: 2px solid @tab-bar-background-color;
+  border-right: 2px solid #212427;
 }
 
 .tree-view {
   color: @text-color;
-  // background-color: @tree-view-background-color;
+  font-weight: 300 !important;
 
   .list-item {
-    border-left: 5px solid transparent;
-    border-radius: 3px;
+    border-left: @tree-view-border-size solid transparent;
+    border-radius: 0;
     &.selected {
       color: @text-color;
-      background-color: @background-color-selected;
-      border-left: 5px solid @text-color-highlight;
+      background-color: #4f5255;
+      border-left: @tree-view-border-size solid @text-color-highlight !important;
     }
   }
   .list-tree .selected::before {
@@ -28,8 +28,8 @@
   }
   .list-item {
     &:hover {
-      background-color: rgba(0, 102, 204, .5);
-      border-left: 5px solid @text-color-highlight;
+      background-color: #3c3f42;
+      border-left: @tree-view-border-size solid transparent;
     }
   }
 }
@@ -41,16 +41,20 @@
 
 .list-tree {
 
-  .status-ignored,
+  .status-ignored {
+
+  }
   .status-ignored.selected,
   .status-ignored.selected.expanded {
-    color: #72767b;
+    color: @text-color;
   }
 
-  .status-modified,
+  .status-modified {
+    color: @text-color;
+  }
   .status-modified.selected,
   .status-ignored.selected.expanded {
-    color: #73bcf7;
+    color: @text-color;
   }
 
   .status-modified,
@@ -120,4 +124,12 @@ li.file.entry.list-item {
       float: right;
     }
   }
+}
+
+// Windows specific overrides
+.platform-win32 atom-workspace .entries.list-tree .file .icon::before {
+  top: 2px !important;
+}
+.platform-win32 atom-workspace .entries.list-tree .icon.icon-file-directory[data-name$=".git"]::before {
+  top: 4px !important;
 }

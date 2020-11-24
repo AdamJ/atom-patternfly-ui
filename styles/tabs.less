@@ -6,16 +6,16 @@
 // Overrides: atom/tabs
 
 .tab-bar {
-  background-color: @tab-bar-background-color;
+  background-color: #212427;
   border-bottom: 0;
   padding-bottom: 5px;
 
   .tab {
     color: @text-color;
-    height: @tab-height * 1.2;
+    height: @tab-height;
     line-height: @tab-height;
-    font-size: @font-size;
-    background-color: @tab-bar-background-color;
+    font-size: calc(@font-size - 2px);
+    background-color: #212427;
     border-bottom: 3px solid transparent;
     transition: .3s border-bottom ease-out;
     .title::before {
@@ -30,7 +30,7 @@
     }
 
     &:hover {
-      border-bottom-color: lighten(@tab-background-color-active, 10%);
+      border-bottom-color: @base-border-color;
       cursor: pointer;
     }
 
@@ -65,4 +65,9 @@
       }
     }
   }
+}
+
+// Windows specific overrides
+.platform-win32 atom-workspace .tab-bar .tab .title::before {
+  margin-top: 12px !important;
 }

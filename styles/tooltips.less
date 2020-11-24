@@ -8,34 +8,34 @@
 
 .tooltip {
   &.top .tooltip-arrow {
-    border-top-color: @background-color-dark;
+    border-top-color: @background-color-light;
   }
   &.right .tooltip-arrow {
-    border-right-color: @background-color-dark;
+    border-right-color: @background-color-light;
   }
   &.bottom .tooltip-arrow {
-    border-bottom-color: @background-color-dark;
+    border-bottom-color: @background-color-light;
   }
   &.left .tooltip-arrow {
-    border-left-color: @background-color-dark;
+    border-left-color: @background-color-light;
   }
 
   .tooltip-inner {
     line-height: 1;
-    padding: .75em;
+    padding: 8px 16px;
     white-space: nowrap;
     max-width: none;
-    border-radius: 3px;
-    color: @text-color;
-    background: @background-color-dark;
-    box-shadow: 2px 2px 4px 0 #4d5258;
+    border-radius: 0;
+    border: 1px solid #212427;
+    color: @text-color-dark;
+    background: @background-color-light;
   }
 
   .keystroke {
     padding: .15em .4em;
     margin: 0 -.3em 0 .25em;
     border-radius: max(2px, @component-border-radius / 2);
-    color: @background-color-dark;
-    background: @background-color-dark;
+    color: @background-color-light;
+    background: @background-color-light;
   }
 }

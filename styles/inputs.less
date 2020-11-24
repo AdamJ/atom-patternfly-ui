@@ -1,22 +1,31 @@
-
-
-@checkbox-background-color-checked: #0088ce;
-
-
+.input-text,
+.input-search,
+.input-textarea {
+  border: 1px solid #8a8d90;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: transparent;
+  border-radius: 0;
+}
 .input-text,
 .input-search,
 .input-textarea {
   &:active,
   &:hover {
+    border-bottom-color: @input-border-color-hightlight;
+  }
+  &:focus {
     border-color: @input-border-color-hightlight;
   }
 }
 .input-checkbox,
 .input-radio,
 .input-toggle {
+  border-radius: calc(1rem * 1.5);
+  background-color: #d2d2d2;
   &::before,
   &::after {
-    background-color: @text-color;
+    background-color: #fff;
+    box-shadow: rgba(3, 3, 3, .12) 0 2px 2px 0, rgba(3, 3, 3, .06) 0 0 2px 0;
   }
   &:checked {
     background-color: @checkbox-background-color-checked;
@@ -28,4 +37,13 @@
       border-color: #7dc3e8;
     }
   }
+}
+.input-toggle:before {
+  border-width: 4px !important;
+}
+.input-radio:checked:before {
+  transform: scale(1.5);
+}
+.input-checkbox {
+  border-radius: @component-border-radius;
 }

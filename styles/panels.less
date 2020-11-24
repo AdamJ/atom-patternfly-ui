@@ -3,20 +3,22 @@
 // -------------------
 
 .tool-panel.tree-view {
-  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
-  background-color: rgba(20, 20, 20, 0.9);
+  background-color: #212427;
 }
 
 atom-pane-container atom-pane .item-views {
-  background-image: linear-gradient(to top, #09203f 0%, #537895 100);
-  background-color: rgba(20, 20, 20, 0.9);
+  background-color: #212427;
 }
 
 // Overrides: atom/static/panels.less
 
+.panels-menu.nav.nav-pills.nav-stacked {
+  margin-bottom: 16px;
+}
+
 .panel-heading {
   border-bottom: 1px solid @panel-heading-border-color;
-  background-color: @panel-heading-background-color;
+  background-color: #212427;
 }
 
 .inset-panel {
@@ -27,6 +29,10 @@ atom-pane-container atom-pane .item-views {
   }
 }
 
+.atom-dock-toggle-button .atom-dock-toggle-button-inner {
+  background-color: #212427;
+  border-radius: @component-border-radius;
+}
 
 // Modal -------------------
 // Used on top of the editor, like the Command Palette.

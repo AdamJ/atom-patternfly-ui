@@ -1,7 +1,7 @@
 {
   "name": "atom-patternfly-ui",
   "theme": "ui",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "A PatternFly inspired Atom.io UI theme",
   "keywords": [
     "ui",
